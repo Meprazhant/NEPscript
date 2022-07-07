@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NepScript - A Nepali Toy language</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.css" integrity="sha512-uq8QcHBpT8VQcWfwrVcH/n/B6ELDwKAdX4S/I3rYSwYldLVTs7iII2p6ieGCM13QTPEKZvItaNKBin9/3cjPAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"
+      integrity="sha512-RDQSW3KoqJMiX0L/UBgwBmH1EmRYp8LBOiLaA8rBHIy+7OGP/7Gxg8vbt8wG4ZYd29P0Fnoq6+LOytCqx3cyoQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./imgres/favcon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="headerde">
+      <div class="headerc">
+        <div class="neplangL">
+        </div>
+        <p class="headerD">
+          A Nepali Toy Programming language For Easy Understanding Programming
+        </p>
+        <div class="whatsnew">
+          <p>Updated: Ashar 22</p>
+        </div>
+    
+        <!-- <a class="why" >तर किन?</a> -->
+        <!-- <span>NEPLANG is Inspired from Indian Programming Language <a href="https://bhailang.js.org/" target="_blank">Bhailang</a></span> -->
+        <div class="headerBtns">
+          <a class="Start" href="#codearea">Code Now</a>
+          <a class="github" href="#docs">Docs</a>
+          <a class="devs" onclick="aboutUser();">Developer</a>
+        </div>
+      </div>
+      <div class="userr" id="userrr">
+        <div class="uporfile animate__fadeInRight" id="newsrrr">
+          <div class="nav">
+            <i class="fa-solid fa-arrow-left" onclick="hideUser();"></i>
+            <i class="fa-solid fa-circle-question"></i>
+          </div>
+          <div class="details">
+            <div class="img">
+              <img src="imgres/user.png" alt="" />
+            </div>
+            <div class="info">
+              <h1>Prashant</h1>
+              <p>Front-End Developer</p>
+            </div>
+            <div class="socials">
+              <div class="icons">
+                <a href="https://prashantkafle.com.np/" target="_blank"><i class="fa-solid fa-earth-americas"></i></a>
+              </div>
+              <div class="icons">
+                <a href="https://www.facebook.com/Prashant.0413/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              </div>
+              <div class="icons">
+                <a href="https://www.instagram.com/prashant.0413/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+              <div class="icons">
+                <a href="https://github.com/meprazhant" target="_blank"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="headerBtns hb2">
+              <a>Message</a>
+              <a>Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="codearea" id="codearea">
+      <div class="playBTNS">
+        <h2>Code Area</h2>
+        <div class="cabtns">
+          <a id="compile" href="#editorOutput"
+            >Run <i class="fa-solid fa-play"></i
+          ></a>
+          <a onclick="clezar();">Clear <i class="fa-solid fa-trash"></i></a>
+        </div>
+      </div>
+      <div class="wrapup"></div>
+      <div class="editorr">
+        <div class="were">
+          <textarea id="lineCounter" wrap="off" readonly>1.</textarea>
+          <textarea
+            id="codeEditor"
+            spellcheck="false"
+            class="tarea"
+            onkeyup="update();"
+            wrap="off"
+          >
+// You can use CTRL + ENTER to run the code
+manau number = lekha Write a number ;e
+
+yedi number % 2==0 xa bhane
+    bhana< number ra " Even ho" ;>
+natra
+    bhana< number ra " odd ho" ;>
+;q</textarea>
+
+<!-- <div class="suggests" id="fordemo"></div> -->
+          
+          <!-- <textarea id='jsval' spellcheck="false" class="jsval" wrap='off' spellcheck="false" wrap='off'>
+</textarea> -->
+
+          <pre
+            id="jsval"
+            class="opicode"
+          ><code id="editorJS" class="language-javascript"></code></pre>
+
+          <i onclick="jssh();" href="#editorJS" class="fa-brands fa-js"></i>
+        </div>
+
+        <div class="eoutput">
+          <div class="edit" id="editorOutput"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="docs" class="docs">
+      <div class="docus">
+        <h2>Documentation</h2>
+        <p>Namaskar, Nepscript prayoog garnu bhayeko ma dhanyabad.</p>
+        <p>
+          Nepscript euta Toy-Programming language ho jun chai Vanilla Javascript
+          code gariyeko ho. Nepscriptko kam chai Basic level ma programming
+          kasari garinxa bhanera bujne ho
+        </p>
+        <p>
+          Yedi tapaiharu pani Javascript Programming siknu hunxa bhane Nepscript
+          ma sajilai sanga sikna saknu hunxa.
+        </p>
+        <h4>Nepscript ka kei Commands Haru:</h4>
+
+        <div class="commands">
+          <div class="cards">
+            <h2 class="title">General</h2>
+            <p class="overview">
+              <span class="codx">bhana</span> and
+              <span class="codx">suchana</span> are the syntax for strarting a
+              code. <span class="codx">bhana</span> Writes the code in console,
+              while <span class="codx">suchana</span> Writes the code in the a
+              Alerting Box. While using this syntax, we have to use
+              <span class="codx">;e</span> at the end of the code.
+            </p>
+            <div class="codedem">
+              <span class="cody">bhana</span> hello, from prashant
+              <span class="cody">;e</span>
+              <br />
+              <span class="cody">Suchana</span> hello prashant
+              <span class="cody">;e</span>
+            </div>
+          </div>
+
+          <div class="cards">
+            <h2 class="title">Variables</h2>
+            <p class="overview">
+              <span class="codx">manau</span> and
+              <span class="codx">lekha</span> are the syntax used to assume a
+              variable.
+              <span class="codx">manau</span> helps to insert variable
+              at writting code, while
+              <span class="codx">lekha</span> inputs
+              user data. we have to end the 
+              <span class="codx">lekha</span> tag
+              with <span class="codx">;e</span>
+
+              <span class="codx">ra</span> is the syntax used to concatinate the
+              variables.
+            </p>
+            <div class="codedem">
+              <span class="cody">manau</span> age = 5
+              <br />
+              <span class="cody">manau</span> name =
+              <span class="cody">lekha</span> what is your name?
+              <span class="cody">;e</span>
+              <br />
+              <span class="cody">bhana</span> age <span class="cody">;e</span>
+              <span class="com">// simply bhana and ;e in manau varaible</span>
+              <br />
+
+              <span class="cody">bhana&lt;</span> "hello"
+              <span class="cody">ra</span> name <span class="cody">;></span>
+              <span class="com"
+                >//bhana&lt; and ;&gt; because input variable</span
+              >
+            </div>
+          </div>
+
+          <div class="cards">
+            <h2 class="title">Conditional</h2>
+            <p class="overview">
+              <span class="codx">yedi</span> checks if the given statement is
+              true <span class="codx">xa bhane</span> is written at the end of
+              <span class="codx">yedi</span> <span class="codx">yata</span> is
+              used for multiple statement.
+              <span class="codx">xa bhane</span> should be written to yata also.
+              <span class="codx">natra</span> is used if none of the statements
+              are true. <span class="codx">;q</span> is used at end of the code.
+            </p>
+            <div class="codedem">
+              <span class="cody">yedi</span> name="Prashant"
+              <span class="cody">xa bhane</span> <br />
+              <span class="cody">bhana</span> hello Prashant ;e <br />
+              <span class="cody">yata</span> name="Ram"
+              <span class="cody">xa bhane</span> <br />
+              <span class="cody">bhana</span> hello Ram
+              <span class="cody">;e</span> <br />
+              <span class="cody">natra</span> <br />
+              <span class="cody">bhana</span> hello user
+              <span class="cody">;e</span> <br />
+              <span class="cody">;q</span> <br />
+            </div>
+          </div>
+
+          <div class="cards">
+            <h2 class="title">Loops</h2>
+            <p class="overview">
+              <span class="codx">jaba samma</span> is a starting of a loop.
+              <span class="codx">hudaina</span> - You know this, Basic NEPALI
+              haha
+            </p>
+            <div class="codedem">
+                <span class="cody">jaba samma</span> 
+                i=0;i<10;i++
+                <span class="cody">hudaina</span> <br />
+                <span class="cody">bhana&lt;</span>
+                "I like you " 
+                <span class="cody">ra</span> 
+                i
+                <span class="cody">ra</span> 
+                "times"
+                <span class="cody">;&gt;</span> <br />
+                <br>
+                <span class="com">// bhana, instead of bhana because of custom variable i</span>
+                <br>
+                <span class="cody">;q</span> <br />
+            </div>
+          </div>
+
+
+          <div class="cards">
+            <h2 class="title">Types</h2>
+            <p class="overview">
+             we can assaign different types of variables with 
+                <span class="codx">manau</span>
+
+             tag
+            </p>
+            <div class="codedem">
+               <span class="cody">
+                manau
+               </span>
+               n = 1 
+                <span class="com"> // A Number variable</span> <br />
+           
+
+            
+            <span class="cody">
+                manau
+               </span>
+               x = Prashant 
+                <span class="com"> // A String variable</span> <br />
+                
+                
+                <span class="cody">
+                    manau
+                </span>
+                a = ["ram","hari",'Sita']
+                <span class="com"> // A Array variable</span> <br />
+
+                <span class="cody">
+                    manau
+                </span> kura =  <span class="cody">
+                    thik
+                </span> 
+                <span class="com"> // A true Boolean</span> <br />
+
+                <span class="cody">
+                    manau
+                </span> kura =  <span class="cody">
+                    galat
+                </span> 
+                <span class="com"> // A false Boolean</span> <br />
+
+                
+                <span class="com"> // A Array variable</span> <br />
+
+                <span class="com"> // Outputting The Variables</span> <br />
+
+                <span class="cody">
+                    bhana
+                </span>
+                x <span class="cody">;e</span> 
+                <span class="com"> // Outputting String Variable</span> <br />
+                
+
+                <span class="cody">
+                    bhana&lt;
+                </span>
+                n <span class="cody">;&gt;</span> 
+                <span class="com"> // Outputting Number Variable</span> <br />
+              
+                <span class="cody">
+                    bhana&lt;
+                </span>
+                a[2] <span class="cody">;&gt;</span> 
+                <span class="com"> // Outputting Number Variable</span> <br />
+
+
+            </div>
+            </div>
+
+
+            <div class="cards">
+                <h2 class="title">More . . . </h2>
+               
+                <h2>Other than this, you can also play with the plain Javascript syntax too. ENJOY coding </h2>
+
+                If you forund any bugs or wanna message the developer
+
+                <a class="clickame" onclick="talaUser();" >Click Here</a>
+
+              </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">
+        <p>©2022 Prashant</p>
+        <div class="socials">
+            <div class="icons">
+              <a href="https://prashantkafle.com.np/" target="_blank"><i class="fa-solid fa-earth-americas"></i></a>
+            </div>
+            <div class="icons">
+              <a href="https://www.facebook.com/Prashant.0413/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="icons">
+              <a href="https://www.instagram.com/prashant.0413/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="icons">
+              <a href="https://github.com/meprazhant" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+    </div>
+    <div class="scs">
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-core.min.js"
+        integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"
+        integrity="sha512-fTl/qcO1VgvKtOMApX2PdZzkziyr2stM65GYPLGuYMnuMm1z2JLJG6XVU7C/mR+E7xBUqCivykuhlzfqxXBXbg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+      <script src="main.js"></script>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
